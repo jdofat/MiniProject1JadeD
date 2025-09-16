@@ -12,25 +12,22 @@ https://www.youtube.com/watch?v=-LZS9UcGKjw&list=PLE5nOs3YmC2TeLcNOxFXKCzVfGb6MJ
 ✅(5/5 points) Proper import of packages used.
 """
 import yfinance as yf
-import pandas as pd
+#import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import pprint
+#import pprint
 import copy
-
-"""
-✅(20/20 points) Using an API of your choice (yfinance works)
--collect the closing price of 5 of your favorite stock tickers
-for the last 10 trading days:
--Coca Cola, Pepsi, McDonalda, Starbucks, and Mondelez Int.
-"""
+import os
 
 tickers = ["KO", "PEP", "MCD", "SBUX", "MDLZ"]
 tickersdata = {}
 
 for stock in tickers:
     data = yf.Ticker(stock)
-    last10 = data.history(period="10d")
+
+    last10 = data.history(period="11d")
+    last10 = last10.iloc[:-1]
+
     tickersdata[stock] = []
     for price in last10["Close"]:
         tickersdata[stock].append(price)
@@ -40,23 +37,37 @@ for stock in tickers:
     highlow = copy.copy(tickersdata[stock])
     highlow.sort()
 
+    plt.title(f"{stock} Closing Prices Last 10 Days")
+    plt.figure()
     plt.plot(mystock)
-    plt.axis((0, 10, highlow[0]-3, highlow[-1]+3))
+    plt.xticks(ticks=range(10), labels=range(1, 11))
+    plt.axis((0, 9, highlow[0]-3, highlow[-1]+3))
     plt.xlabel("X Days Ago")
     plt.ylabel("Closing Price")
     plt.show()
 
+    plt.savefig(f"charts/{stock}_closing_prices.png")
+    plt.close()
 
 
 """
-(10/10 points) Store this information in a list that you will convert to an array in NumPy.
+✅(20/20 points)
+Using an API of your choice (yfinance works)
+-collect the closing price of 5 of your favorite stock tickers
+for the last 10 trading days:
+-Coca Cola, Pepsi, McDonalda, Starbucks, and Mondelez Int.
+
+✅(10/10 points)
+Store this information in a list that you will convert to an array in NumPy.
 
 
-(10/10 points) Plot these 5 graphs:
+✅(10/10 points)
+Plot these 5 graphs:
 -Feel free to add information.
 -At minimum it just needs to show 10 data points.
 
-(10/10 points) Save these graphs in a folder called charts as PNG files
+(10/10 points)
+Save these graphs in a folder called charts as PNG files
 -Do not upload these to your project folder
 -the project should save these when it executes
 -You may want to add this folder to your .gitignore file.
