@@ -74,7 +74,7 @@ Save these graphs in a folder called charts as PNG files
 -the project should save these when it executes
 -You may want to add this folder to your .gitignore file.
 
-(10/10 points) In the main branch of your project:
+✅(10/10 points) In the main branch of your project:
 -Please be sure to include a requirements.txt file which contains all the packages that need installed
 -You can create this file with the output of pip freeze at the terminal prompt.
 
