@@ -8,7 +8,7 @@
 
 Mini Project 1: Using NumPy and Matplotlib to create 5 graphs that output as PNG files in the charts folder
 
-(The `charts/` folder is ignored by Git)
+(The charts/ folder is ignored by Git)
  
 ## Getting Started
  
