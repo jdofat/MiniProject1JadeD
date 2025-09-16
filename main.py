@@ -19,6 +19,8 @@ import matplotlib.pyplot as plt
 import copy
 import os
 
+os.makedirs("charts", exist_ok=True)
+
 tickers = ["KO", "PEP", "MCD", "SBUX", "MDLZ"]
 tickersdata = {}
 
