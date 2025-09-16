@@ -46,6 +46,7 @@ for stock in tickers:
     plt.axis((0, 9, highlow[0]-3, highlow[-1]+3))
     plt.xlabel("X Days Ago")
     plt.ylabel("Closing Price")
+    plt.show()
 
     plt.savefig(f"charts/{stock}_closing_prices.png")
     plt.close()
