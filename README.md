@@ -26,9 +26,9 @@ Clone the repository:
 
 bash:
 
-git clone https://github.com/jdofat/MiniProject1JadeD.git
+git clone https://github.com/jdofat/MiniProject1JadeDofat.git
 
-cd MiniProject1JadeD
+cd MiniProject1JadeDofat
  
  
 ## Authors
