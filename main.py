@@ -68,7 +68,7 @@ Plot these 5 graphs:
 -Feel free to add information.
 -At minimum it just needs to show 10 data points.
 
-(10/10 points)
+✅(10/10 points)
 Save these graphs in a folder called charts as PNG files
 -Do not upload these to your project folder
 -the project should save these when it executes
