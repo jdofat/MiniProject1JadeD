@@ -4,13 +4,8 @@
 
 # Mini Project 1
 
+#https://www.youtube.com/watch?v=-LZS9UcGKjw&list=PLE5nOs3YmC2TeLcNOxFXKCzVfGb6MJri4&index=2
 
-"""
-Video:
-https://www.youtube.com/watch?v=-LZS9UcGKjw&list=PLE5nOs3YmC2TeLcNOxFXKCzVfGb6MJri4&index=2
-
-✅(5/5 points) Proper import of packages used.
-"""
 import yfinance as yf
 #import pandas as pd
 import numpy as np
@@ -53,6 +48,10 @@ for stock in tickers:
 
 
 """
+#REQUIREMENTS:
+
+✅(5/5 points) Proper import of packages used.
+
 ✅(20/20 points)
 Using an API of your choice (yfinance works)
 -collect the closing price of 5 of your favorite stock tickers
