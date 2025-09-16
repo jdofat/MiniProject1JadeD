@@ -26,7 +26,6 @@ tickersdata = {}
 
 for stock in tickers:
     data = yf.Ticker(stock)
-
     last10 = data.history(period="11d")
     last10 = last10.iloc[:-1]
 
@@ -39,14 +38,14 @@ for stock in tickers:
     highlow = copy.copy(tickersdata[stock])
     highlow.sort()
 
-    plt.title(f"{stock} Closing Prices Last 10 Days")
     plt.figure()
+    plt.title(f"{stock} Closing Prices Last 10 Days")
     plt.plot(mystock)
+
     plt.xticks(ticks=range(10), labels=range(1, 11))
     plt.axis((0, 9, highlow[0]-3, highlow[-1]+3))
     plt.xlabel("X Days Ago")
     plt.ylabel("Closing Price")
-    plt.show()
 
     plt.savefig(f"charts/{stock}_closing_prices.png")
     plt.close()
