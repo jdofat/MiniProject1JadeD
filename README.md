@@ -6,28 +6,30 @@
  
 ## Description
 
-Mini Project 1: Using NumPy and Matplotlib to create 5 graphs that output as PNG files.
+Mini Project 1: Using NumPy and Matplotlib to create 5 graphs that output as PNG files in the charts folder
+
+(The `charts/` folder is ignored by Git)
  
 ## Getting Started
  
 ### Dependencies
  
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-* List pip install instructions.
+This project uses Python 3.9+ and requires:
+
+- [yfinance]
+- [numpy]
+- [matplotlib]
  
 ### Installing
  
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+Clone the repository:
+
+bash:
+
+git clone https://github.com/jdofat/MiniProject1JadeD.git
+
+cd MiniProject1JadeD
  
-### Executing program
- 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
  
 ## Authors
  
